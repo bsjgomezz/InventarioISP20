@@ -33,6 +33,7 @@
             iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             SubMenuArticulos = new FontAwesome.Sharp.IconMenuItem();
             SubmenuCategorias = new FontAwesome.Sharp.IconMenuItem();
+            SubMenuClientes = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
             SubMenuSalirDelSistema = new FontAwesome.Sharp.IconMenuItem();
             menuStrip1.SuspendLayout();
@@ -48,9 +49,10 @@
             BtnSaludo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             BtnSaludo.IconSize = 35;
             BtnSaludo.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnSaludo.Location = new Point(12, 466);
+            BtnSaludo.Location = new Point(8, 370);
+            BtnSaludo.Margin = new Padding(2);
             BtnSaludo.Name = "BtnSaludo";
-            BtnSaludo.Size = new Size(161, 54);
+            BtnSaludo.Size = new Size(113, 32);
             BtnSaludo.TabIndex = 0;
             BtnSaludo.Text = "Saludo";
             BtnSaludo.UseVisualStyleBackColor = false;
@@ -62,18 +64,20 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { iconMenuItem1, iconMenuItem2 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(957, 33);
+            menuStrip1.Padding = new Padding(4, 1, 0, 1);
+            menuStrip1.Size = new Size(795, 30);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
             // iconMenuItem1
             // 
-            iconMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { SubMenuArticulos, SubmenuCategorias });
+            iconMenuItem1.BackColor = Color.LimeGreen;
+            iconMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { SubMenuArticulos, SubmenuCategorias, SubMenuClientes });
             iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.House;
             iconMenuItem1.IconColor = Color.Black;
             iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem1.Name = "iconMenuItem1";
-            iconMenuItem1.Size = new Size(118, 29);
+            iconMenuItem1.Size = new Size(89, 28);
             iconMenuItem1.Text = "Principal";
             // 
             // SubMenuArticulos
@@ -82,7 +86,7 @@
             SubMenuArticulos.IconColor = Color.Black;
             SubMenuArticulos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             SubMenuArticulos.Name = "SubMenuArticulos";
-            SubMenuArticulos.Size = new Size(270, 34);
+            SubMenuArticulos.Size = new Size(188, 30);
             SubMenuArticulos.Text = "Articulos";
             SubMenuArticulos.Click += SubMenuArticulos_Click;
             // 
@@ -92,18 +96,29 @@
             SubmenuCategorias.IconColor = Color.Black;
             SubmenuCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             SubmenuCategorias.Name = "SubmenuCategorias";
-            SubmenuCategorias.Size = new Size(270, 34);
+            SubmenuCategorias.Size = new Size(188, 30);
             SubmenuCategorias.Text = "Categorías";
             SubmenuCategorias.Click += SubmenuCategorias_Click;
             // 
+            // SubMenuClientes
+            // 
+            SubMenuClientes.IconChar = FontAwesome.Sharp.IconChar.User;
+            SubMenuClientes.IconColor = Color.Black;
+            SubMenuClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            SubMenuClientes.Name = "SubMenuClientes";
+            SubMenuClientes.Size = new Size(188, 30);
+            SubMenuClientes.Text = "Clientes";
+            SubMenuClientes.Click += SubMenuClientes_Click;
+            // 
             // iconMenuItem2
             // 
+            iconMenuItem2.BackColor = Color.LimeGreen;
             iconMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { SubMenuSalirDelSistema });
             iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.DoorClosed;
             iconMenuItem2.IconColor = Color.Black;
             iconMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem2.Name = "iconMenuItem2";
-            iconMenuItem2.Size = new Size(85, 29);
+            iconMenuItem2.Size = new Size(65, 28);
             iconMenuItem2.Text = "Salir";
             // 
             // SubMenuSalirDelSistema
@@ -112,19 +127,21 @@
             SubMenuSalirDelSistema.IconColor = Color.Black;
             SubMenuSalirDelSistema.IconFont = FontAwesome.Sharp.IconFont.Auto;
             SubMenuSalirDelSistema.Name = "SubMenuSalirDelSistema";
-            SubMenuSalirDelSistema.Size = new Size(241, 34);
+            SubMenuSalirDelSistema.Size = new Size(158, 22);
             SubMenuSalirDelSistema.Text = "Salir del sistema";
             SubMenuSalirDelSistema.Click += SubMenuSalirDelSistema_Click;
             // 
             // MenuPrincipalView
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(957, 532);
+            BackColor = SystemColors.ActiveBorder;
+            ClientSize = new Size(795, 409);
             Controls.Add(BtnSaludo);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(2);
             Name = "MenuPrincipalView";
             Text = "Sistema de Inventario ISP20 - 2do año TSDS";
             WindowState = FormWindowState.Maximized;
@@ -143,5 +160,6 @@
         private FontAwesome.Sharp.IconMenuItem SubMenuSalirDelSistema;
         private FontAwesome.Sharp.IconMenuItem SubMenuArticulos;
         private FontAwesome.Sharp.IconMenuItem SubmenuCategorias;
+        private FontAwesome.Sharp.IconMenuItem SubMenuClientes;
     }
 }

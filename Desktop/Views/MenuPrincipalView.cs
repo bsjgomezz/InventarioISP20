@@ -33,5 +33,11 @@ namespace Desktop
             CategoriasView categoriasView = new();
             categoriasView.ShowDialog();
         }
+
+        private void SubMenuClientes_Click(object sender, EventArgs e)
+        {
+            ClientesView clientesView = new();
+            clientesView.ShowDialog();
+        }
     }
 }
